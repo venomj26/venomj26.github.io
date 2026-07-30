@@ -6,7 +6,7 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
-cv_file_name: "SnehajhaCV2024"
+cv_file_name: "SnehajhaCV2026_New"
 ---
 
 {% include base_path %}
