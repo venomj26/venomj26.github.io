@@ -15,9 +15,9 @@ I have worked on a few other interesting topics such as pavement management, ant
 Beyond my research, I like to play tennis and read modern history.  -->
 
 
-I am a Postdoctoral researcher in Purdue Agronomy. In ABE, my dissertation was on leveraging high resolution geospatial data for decision support systems required in distributed systems. These include Precision agriculture and pavement maintenance.
+I am a Postdoctoral researcher in Purdue's Department of Agronomy. I work with Dr. Pratishtha Poudel. I have earned my Ph.D. from the Department of Agricultural and Biological Engineering at Purdue. I was advised in my Ph.D. thesis by Dr. James V. Krogmeier from the Elmore Family School of Electrical and Computer Engineering at Purdue. In my dissertation, I worked on leveraging high-resolution geospatial data for decision support systems required in distributed systems. These include Precision agriculture and pavement maintenance.
 
-In precision agriculture I customize field trials to the topography of fields. Publicly available geographical datasets are applied to create field digital twins. These digital twins act as testbeds for assessing adaptive agricultural management practices.
+In precision agriculture, I customize field trials to the topography of fields. Publicly available geographical datasets are applied to create field digital twins. These digital twins act as testbeds for assessing adaptive agricultural management practices.
 
 
 I have worked on a few other interesting topics such as precision pavement management, antimicrobial resistance surveillance, and sentiment analysis towards precision ag using Twitter/X data.
