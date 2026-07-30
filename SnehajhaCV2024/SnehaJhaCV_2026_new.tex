@@ -1,0 +1,324 @@
+%-------------------------
+% Rover Resume - Fancy Template
+% Link: https://github.com/subidit/rover-resume
+%------------------------
+
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+% \usepackage{inter} % https://tug.org/FontCatalogue/
+% \renewcommand*\familydefault{\sfdefault}
+
+% \usepackage{Alegreya} %% Option 'black' gives heavier bold face 
+% \renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{mfirstuc}
+\geometry{
+a4paper,
+top=1.8cm,
+bottom=1in,
+left=2.5cm,
+right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=0pt..1.5em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+\usepackage[dvipsnames]{xcolor}
+% \usepackage[dvipsnames, svgnames, x11names]{xcolor} 
+% \usepackage[dvipsnames]{xcolor} % xcolor.pdf Sec.4 Colors by Name
+\colorlet{icnclr}{black}
+% \colorlet [⟨type⟩]{⟨name⟩}[⟨num model⟩]{⟨color ⟩}
+% \definecolor[⟨type⟩]{⟨name⟩}{⟨model-list⟩}{⟨spec-list⟩}
+
+
+\usepackage{titlesec}
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+% \titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sec>}{<before-code>}[<after-code>]  
+%\titleformat{\section}{\color{Periwinkle}\normalsize\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\newcommand{\ruleafter}[1]{%
+  #1%
+  \par\nobreak\vspace{-0.8em}%
+  \noindent\textcolor{black}{\rule{\linewidth}{0.4pt}}%
+}
+% \titleformat{\section}{\color{black}\normalsize\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+% \titleformat{\subsection}{\normalsize\fontseries{semibold}\selectfont}{}{}{\rvs}
+% \titleformat{\subsubsection}{\normalsize\fontseries{medium}\selectfont}{}{}{}
+\titleformat{\section}
+{\color{black}\normalsize\bfseries\uppercase}
+{}
+{0pt}
+{\ruleafter}
+[\global\RemVStrue]
+
+\titleformat{\subsection}
+{\normalsize}
+{}
+{0pt}
+{\rvs}
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries}
+{}
+{0pt}
+{\capitalisewords}
+\usepackage{xhfill} 
+%\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{0.5pt}[gray]} % add rule after title in .5 x-height 
+%%\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{0.3pt}[gray]} % Lighter and thinner dashed rule
+
+\newcommand{\subsectiondate}[2]{%
+  \subsection*{%
+    #1\enspace\xdotfill[.5ex]{1pt}[black]\enspace #2%
+  }%
+}
+
+\newif\ifRemVS % remove vspace between \section & \subsection
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\newcommand{\awardentry}[2]{%
+  \noindent\makebox[\linewidth][s]{%
+    #1\enspace\xdotfill[.5ex]{1pt}[black]\enspace #2%
+  }%
+  \par
+}
+\usepackage{fontawesome5}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+% \hypersetup{ % https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+%     colorlinks=true,
+%     urlcolor=Periwinkle,
+%     pdftitle={My Resume},
+% }
+\definecolor{deepblue}{HTML}{0a00c4}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=ProcessBlue,
+    pdftitle={My Resume},
+}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+%\cfoot{\color{darkgray} Rover R\'esum\'e -- Page \thepage{} of \totalpages}
+
+
+\begin{document}
+
+\begin{flushright}
+    {\fontsize{12}{12}\bfseries Sneha Jha} \\[0.15em]
+
+    {\fontsize{10}{10}\mdseries\selectfont Postdoctoral Researcher}\\
+    {\fontsize{10}{10}\mdseries\selectfont Department of Agronomy, Purdue University}\\
+    %{\fontsize{10}{10}\mdseries\selectfont Advisor: Dr. Pratishtha Poudel}\\[0.15em]
+
+    {\fontsize{10}{10}\mdseries\selectfont
+    {\hypersetup{urlcolor=deepblue}
+    {\color{deepblue}\faEnvelope[regular]} \href{mailto:jha16@purdue.edu}{jha16@purdue.edu}}
+    $|$ 
+    {\color{black}\faIcon{mobile-alt}} 765 637 8850
+    $|$
+    {\hypersetup{urlcolor=deepblue}
+    {\color{deepblue}\faIcon{globe}} \href{https://venomj26.github.io/}{venomj26.github.io}}
+    }
+\end{flushright}
+
+\section{ Research Interests}
+\vspace{-1.25 em}
+Design of field experiments, Precision agriculture, Internet of Things, agricultural Cyber-Physical Systems, and Decision Support Systems.
+\vspace{-1 em}
+
+\section{Education and Professional Position}
+\vspace{-0.35 em}
+\subsectiondate{Postdoctoral Research Assistant in Department of Agronomy {\normalfont\textit{(Agroecosystem Modeling)}}}{2026}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Purdue University, United States (Advisor: Dr. Pratishtha Poudel)
+\end{itemize}
+\subsectiondate{Ph.D. in Agricultural and Biological Engineering {\normalfont\textit{(Digital Agriculture)}}}{2025}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Purdue University, United States (Advisor: Dr. James V. Krogmeier)
+    \item[-] \textit{Dissertation : The Use of High-Resolution Geospatial Data for Decision Support Systems Required in Large Area Distributed Systems }
+\end{itemize}
+\subsectiondate{M.S. in Agricultural and Food Engineering (\normalfont\textit{Farm Machinery and Power})}{2017}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Indian Institute of Technology, Kharagpur, India (Advisor: Dr. Virendra K. Tewari)
+    \item[-] \textit{Dissertation : Embedded GPS-integrated Variable Rate Fertilizer Applicator }
+\end{itemize}
+\subsectiondate{B.Tech in Electronics and Instrumentation Engineering}{2013}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] College of Engineering and Management, Kolaghat, India (Advisor: Dr. Saibal Pradhan)
+    \item[-] \textit{Determination of Wind Energy Density in India Using the Weibull Distribution }
+\end{itemize}
+
+\section{Awards}
+\vspace{-0.85 em}
+\awardentry{The Estus H. and Vashti L. Magoon \textbf{Research Excellence Award}, Purdue University}{2025}
+\awardentry{Bilsland Dissertation Fellowship, Purdue University}{2025}
+\awardentry{IEEE Circuits and Systems Student Travel Grant to Uruguay}{2025}
+\awardentry{Purdue Graduate Student Government Travel Award, Purdue University}{2025}
+\awardentry{Graduate Student \textbf{Best Poster Award} at the 100th CRWAD conference, Chicago, Illinois}{2019}
+
+\section{Research Experience}
+%===================
+\subsectiondate{Calibrating Agronomic Models to Indiana Parameters}{2026}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Postdoctoral Researcher, Purdue University
+\end{itemize}
+\subsectiondate{The Use of High-Resolution Geospatial Data for Decision Support Systems Required in Large Distributed Networks in the United States}{2022-2025}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Graduate Research Assistant, Purdue University
+    \item[-] Ph.D. thesis project with Dr. James V. Krogmeier from Elmore Family School of Electrical and Computer Engineering at Purdue University
+    
+\end{itemize}
+\subsectiondate{Comprehensive Pavement Management Tool under the Purdue Indiana Department of Transportation Joint Transportation Research Program (JTRP), SPR4521}{2021-2023}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Graduate Research Assistant, Purdue University
+    \item[-] Collaboration with Dr. Seonghwan J. Cho from Indiana Department of Transportation
+    
+\end{itemize}
+\subsectiondate{Generating Dynamic Prescription Maps for Winter Road Treatment via Sun-Shadow Simulation}{2020-2021}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Graduate Research Assistant, Purdue University
+    \item[-] Collaboration with Dr. Darcy M. Bullock from Lyles and Porter School of Civil Engineering. Purdue University 
+    
+\end{itemize}
+\subsectiondate{Establishing an AMR surveillance system in the USA to analyze the E. coli resistome across the One Health
+spectrum}{2018-2020}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Graduate Research Assistant, Purdue University
+    \item[-] Collaboration with Dr. Audrey Ruple from the Department of Public Health, Purdue University
+    
+\end{itemize}
+\subsectiondate{Big Data solutions in Agricultural decision support applications using Twitter data}{2017-2018}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Graduate Research Assistant, Purdue University
+    \item[-] Collaboration with Dr. Dr. Mark D. Ward from the Department of Statistics, Purdue University
+    
+\end{itemize}
+\subsectiondate{On-the-go embedded variable rate fertilizer applicator for variable nitrogen fertilizer application}{2014-2017}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Graduate Research Assistant, IIT Kharagpur
+    \item[-] M.S. Thesis project with Dr. Virendra K. Tewari of Agricultural and Food Engineering Department at IIT Kharagpur
+    
+\end{itemize}
+\subsectiondate{Identify the city for the establishment of wind energy plants in the four main windy regions of India using the Weibull distribution in MATLAB}{2012-2013}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Leading Undergraduate Researcher
+    \item[-] Advisor: Dr. Saibal Pradhan from Department of Applied Electronics and Instrumentation Engineering, College of Engineering and Management, Kolaghat
+\end{itemize}
+\subsectiondate{Optimization of the Design-to-Cost Ratio of Buck-Boost Converters in the Texas Instrument Webench Webtool}{2012}
+\begin{itemize}[label=-, labelindent=1.5em, leftmargin=2.5em, labelsep=0.6 em, itemsep =0pt, topsep=0pt]
+    \item[-] Role: Undergraduate Research Intern
+    \item[-] B.Tech Internship project with Dr. Amit Patra from Department of Electrical Engineering at IIT Kharagpur
+    
+\end{itemize}
+
+\section{Research Achievements}
+%===============
+\vspace{-0.9 em}
+
+\subsubsection{Peer Reviewed Journal Publications}
+%\subsubsection{Journal}
+\begin{enumerate}[label={[\arabic*]}, leftmargin=3em, itemsep=0pt, topsep=0pt]
+    \item Bailey, J., Rubio, F. C., Balmos, A. D., Pai, A., Loo, L., \textbf{Jha, S.}, M. S. Basir, Buckmaster, D. R., Krogmeier, J. V., Zhang, Y. \& Kaur, U. (2025). Leveraging Generative AI for Data Analysis in Farm Management. Applied Engineering in Agriculture, 41(5), 505-519.
+    \item \textbf{Jha S.}, Krogmeier J. V., Buckmaster D. R., \& Balmos A. D. (2024). "Python Programming in Digital Agriculture." In Case Studies and Modules for Data Science Instruction (pp. 7-24). American Society of Agricultural and Biological Engineers.
+    \item \textbf{Jha S.}, Zhang Y., Park B., Cho S., Krogmeier J. V., Bagchi T., \& Haddock J. E. (2023). “Data-Driven Web-Based Patching Management Tool Using Multi-Sensor Pavement Structure Measurements.” Transportation Research Record, 2677(12), 83-98. doi: 10.1177/03611981231167161
+\end{enumerate}
+
+\vspace{1 em}
+
+\subsubsection{Peer Reviewed Conference Papers}
+\begin{enumerate}[label={[\arabic*]}, leftmargin=3em, itemsep=0pt, topsep=0pt]
+    \item \textbf{Jha S.} and J. V. Krogmeier, "Advancing Meter Resolution Crop Simulation Model as a Testbed for Precision Agricultural Applications," 2025 IEEE Conference on AgriFood Electronics (CAFE), Montevideo, Uruguay, 2025, pp. 1-5, doi: 10.1109/CAFE66884.2025.11547732. 
+
+    \item Castiblanco F. A., \textbf{Jha S.}, Nguyen L. V.,  Love D. J., and  Krogmeier J. V., "Path Loss Modeling in Underground Wireless Channels with Spatial Soil Texture Variability," 2025 IEEE Conference on AgriFood Electronics (CAFE), Montevideo, Uruguay, 2025, pp. 1-5, \\doi: 10.1109/CAFE66884.2025.11547566. 
+
+    \item \textbf{Jha, S}., Krogmeier, J. V., and Zhang, Y. (2025). Leveraging high-resolution geospatial data for systematic blocking in precision agricultural experiments. Presented at ASABE Annual International Meeting, 13-16th July, Toronto, Canada.
+    
+    \item Balmos A. D., \textbf{Jha S.}, Krogmeier J. V., Buckmaster D. R., Love D. J., Grant R. H., Crawford M., Brinton C., Wang C., \& Cappelleri D. (2024). Design of an autonomous ag platform capable of field-scale data collection in support of artificial intelligence. Proceedings of the 16th International Conference on Precision Agriculture (ICPA).
+    
+    \item Castiblanco F. A., Lee B., Arun A. N., Balmos A., \textbf{Jha S.}, Krogmeier J. V., \& Buckmaster D.R. (2024). OATSMobile: A Data Hub for Underground Sensor Communications and Rural IoT. Proceedings of the 16th International Conference on Precision Agriculture (ICPA)
+    
+    \item \textbf{Jha, S.}, Zhang, Y., Krogmeier, J. V., and Buckmaster, D. R. (2023). Framework for A Web-Based Application Leveraging Geospatial Information to Automate On-Farm Trial Design. In 2023 ASABE Annual International Meeting (p. 1). American Society of Agricultural and Biological Engineers.
+    
+    \item Zhang Y., \textbf{Jha S.}, Bullock D. M., and Krogmeier J. V., "Generating Dynamic Prescription Maps for Winter Road Treatment via Sun-Shadow Simulation," 2021 IEEE International Intelligent Transportation Systems Conference (ITSC), Indianapolis, IN, USA, 2021, pp. 3387-3392, doi: 10.1109/ITSC48978.2021.9565055.
+    
+    \item \textbf{Jha S.}, Saraswat D., and Ward M.D. “Trends in Big Data solutions in Agricultural decision support systems using Twitter data.”(2018 ). 14th International Conference on Precision Agriculture. [ Conference proceedings]
+\end{enumerate}
+\vspace{1 em}
+
+\subsubsection{Technical Reports}
+\begin{enumerate}[label={[\arabic*]}, leftmargin=3em, itemsep=0pt, topsep=0pt]
+    \item \textbf{Jha, S.}, Zhang, Y., Bagchi, T., Balmos, A., Park, B., Haddock, J. E., Cho, S., and Krogmeier, J. V. (2024). Comprehensive pavement patching tools and web-based software for pavement condition assessment and visualization (Joint Transportation Research Program Publication No. FHWA/IN/JTRP-2024/29). West Lafayette, IN: Purdue University. \\https://doi.org/10.5703/1288284317770
+
+    \item Mahlberg, J., Zhang, Y., \textbf{Jha S.}, Mathew, J. K., Li, H., Desai, J., Kim, W., McGuffey, J., Wells, T., Krogmeier, J. V., \& Bullock, D. M. (2021). Development of an intelligent snowplow truck that integrates telematics technology, roadway sensors, and connected vehicle (Joint Transportation Research Program Publication No. FHWA/IN/JTRP-2021/27). West Lafayette, IN: Purdue University, doi:10.5703/1288284317355.
+
+\end{enumerate}
+\vspace{1 em}
+\subsubsection{Conference Presentations and Posters}
+%=================
+
+\begin{enumerate}[label={[\arabic*]}, leftmargin=3em, itemsep=0pt, topsep=0pt]
+\item \textbf{Jha, S.}, and Krogmeier, J. V. (2026, July). High-resolution field digital twins for adaptive agricultural management. American Society of Agricultural and Biological Engineers (ASABE) Annual International Meeting (AIM 2026), Indianapolis, IN, United States.
+
+\item \textbf{Jha, S.}, Krogmeier, J. V., Balmos A. ,Castiblanco F. A., and Buckmaster D.R. (2026, July). CROP: A metadata framework for federated data discovery in precision agriculture research [Poster presentation]. American Society of Agricultural and Biological Engineers (ASABE) Annual International Meeting (AIM 2026), Indianapolis, IN, United States
+
+\item \textbf{Jha S.}, Buckmaster D.R., and Krogmeier J.V. (2024, May 13-16), “A methodology to minimize error from pedogeomorphic variation in agricultural field experiments”. Conference on Applied Statistics in Agriculture and Natural Resources, Iowa State University, Ames, IA.
+\item \textbf{Jha S.}, Zhang Y., Buckmaster D.R., and Krogmeier J.V. (2023, May 8-12), “A Web-Based Application Leveraging Geospatial Information to Automate on-Farm Trial Design”, ASABE Annual International Meeting, Omaha, Nebraska.
+\item \textbf{Jha S.}, Zhang Y., Buckmaster D.R., and Krogmeier J.V. (2023, May 15-17), “A Framework to Automate the Statistical Design of Field Experiments for Modern Farm Management Practices”. 2023 Conference on Applied Statistics in Agriculture and Natural Resources, Purdue University, West Lafayette, IN.
+\item	\textbf{Jha S.}, Zhang Y., Park B., Cho S., Krogmeier J. V., Bagchi T., and Haddock, J.E. (2023, January 8-12). “Data-Driven Web-Based Patching Management Tool Using Multi-Sensor Pavement Structure Measurements.” 102nd Transportation Research Board Annual Meeting, Washington, D.C.
+\item	\textbf{Jha S.}, Zhang Y., Park B., Cho S., Krogmeier J. V., Bagchi T., and Haddock J.E. (2022, October 24-27). “Web-Based Patching Management Tool using Multi-Sensor Pavement Condition Measurements.” 31st Annual FWD Users Group Meeting, Reno, USA.
+\item	\textbf{Jha S.}, Zhang Y., Park B., Cho S., Krogmeier J. V., Bagchi T., and Haddock J.E. (2022, October 24-27). “Comprehensive Tools for Automated Creation of Patching Tables.” 2022 Joint Transportation Research Program (JTRP) Poster Session. Indiana Government Center South Atrium, Indianapolis, USA.
+\item	\textbf{Jha S.}, Zhang Y., Park B., Cho S., Krogmeier J. V., Bagchi T., and Haddock J.E. (2022, March 16th). “Comprehensive Tools for Automated Creation of Patching Tables.” 108th Purdue Road School Transportation Conference \& Expo, Purdue University, USA.
+\item	\textbf{Jha S.}, Ault A.C., Krogmeier J. V., Ekakoro J., and Ruple A. (2020). "Establishing an AMR surveillance system in the USA to analyze the E. coli resistome across the One Health spectrum." 101st CRWAD, online.
+\item	\textbf{Jha S.}, Ault A.C., Krogmeier J. V., Ekakoro J., and Ruple A. (2019). “Creating an integrated framework for the analysis of AMR data to establish a One Health surveillance system.” 100th CRWAD, Chicago, USA.
+\item	\textbf{Jha S.}, Ault A.C., Krogmeier J. V., Ekakoro J., and Ruple A. (2019). “Analysis and inference of initial data used to establish a One Health AMR surveillance system.” 100th CRWAD, Chicago, USA
+\item	\textbf{Jha S.}, Ekakoro J., Krogmeier J.V. and Ruple A. (2021). “Examination of open-source antimicrobial resistance data isolated from E. coli as a source for one health surveillance.” The Indiana branch of the American Society of Microbiology's biannual meeting in 2021. [Oral and poster presentation]
+\item	\textbf{Jha S.}, Ekakoro J., Krogmeier J. V., and Ruple A. (2020). “Establishing an AMR surveillance system in the USA to analyze the E. coli resistome across the One Health spectrum” 101st CRWAD, Chicago, USA. Oral and poster presentation
+\item	\textbf{Jha S.}, Saraswat D., and Ward M. D. (2018). “Analyzing trends foran  agricultural decision support system using Twitter data.” ASABE Annual International Meeting, Michigan, USA
+\item	\textbf{Jha S.}, Saraswat D, and Ward M. D. (2018). “Analyzing trends for an agricultural decision support system using Twitter data.” 14th International Conference on Precision Agriculture, Montreal, Canada.
+\item \textbf{Jha S.}, Tewari V.K. and Bhattacharyya T.K. (2016). Design and Development of an Embedded System-based Variable Rate Fertilizer Applicator. International Conference on Emerging Technologies in Agricultural and Food Engineering, IIT Kharagpur, India.
+\end{enumerate}
+
+
+\section{Teaching}
+\begin{description}
+    \item[-] Instructor for Python Programming for Digital Agriculture under the NSF HEC grant in 2022 and 2023.
+    \item[-] Instructor for Python Programming for Digital Agriculture under the SURF and REU grants in 2021, 2022, 2023.
+\end{description}
+
+\section{Services}
+\begin{description}
+    \item \textbf{Innovations and Ecosystems Liaison} for IoT4Ag Student and Post-doc Leadership Council, 2024. IoT4Ag is an NSF-funded ERC including Purdue University, University of Pennsylvania, University of Florida, and University of California, Merced.
+    \item \textbf{REU mentor for IoT4Ag} mentored REU and SURF students in 2021, 2022, and 2023.
+    \item \textbf{Professional Development Chair} of ABE Graduate Student Association (GSA) in 2019 
+    \item \textbf{Planning committee head} of the ABE GSA symposium in 2019, organized the ABE GSA symposium.
+\end{description}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\linewidth]{IMG_7515.JPG}
+
+\end{figure}
+
+\end{document}
